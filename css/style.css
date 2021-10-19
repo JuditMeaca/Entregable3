@@ -66,6 +66,28 @@ html,body {
     100% { background-position:-672px }
   }
   
+  #bird {
+    /* Tamaño de la viñeta individual */
+    width:92px;
+    height:64px;
+    /* Cómo hay establecido un tamaño, centramos con margin:auto */
+    margin:auto;  
+    /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+    background:url('../img/bird.png');
+    /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
+    animation:fly 0.4s steps(3) infinite;
+    /* Posicionamos el personaje sobre el camino de madera */
+    position:relative;
+    bottom:100px;/*camina sobre el muelle*/
+  }
+
+  @keyframes fly {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-276px }
+  }
+  
 
   /* Animación del cielo. Efecto "Parallax", va más lento que el mar. */
   #sky {
