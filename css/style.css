@@ -17,13 +17,35 @@ html,body {
     /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
     animation:walk .8s steps(6) infinite;
     /* Posicionamos el personaje sobre el camino de madera */
-    position:relative;
+    position: absolute;
     bottom:34px;/*camina sobre el muelle*/
   }
   
 
   /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
   @keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-672px }
+  }
+
+  #ball {
+    /* Tamaño de la viñeta individual */
+    width:112px;
+    height:150px;
+    /* Cómo hay establecido un tamaño, centramos con margin:auto */
+    margin:auto;  
+    /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+    background:url('../img/ball.png');
+    /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
+    animation:jump .8s steps(6) infinite;
+    /* Posicionamos el personaje sobre el camino de madera */
+    position:relative;
+    bottom:34px;/*camina sobre el muelle*/
+  }
+
+  @keyframes jump {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
@@ -39,7 +61,7 @@ html,body {
   
 
   /* Animación del mar. */
-  #sea {
+  #ground {
     background:url('../img/suelo.png') repeat-x;
     animation: movebg 6s linear infinite;
     /* Posicionamos el mar, para que no solape al cielo */
