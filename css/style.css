@@ -4,6 +4,20 @@ html,body {
     background:white;
   }
   
+  header{
+    padding: 50px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+  }
+  #gameContainer{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+   
+   
+  }
 
   /* Bernard Bernoulli: Animación del personaje */
   #bern {
@@ -62,6 +76,7 @@ html,body {
 
   /* Animación del mar. */
   #ground {
+    border: 2px solid black;
     background:url('../img/suelo.png') repeat-x;
     animation: movebg 6s linear infinite;
     /* Posicionamos el mar, para que no solape al cielo */
