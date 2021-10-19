@@ -4,6 +4,7 @@ html,body {
     background:white;
   }
   
+
   /* Bernard Bernoulli: Animación del personaje */
   #bern {
     /* Tamaño de la viñeta individual */
@@ -20,6 +21,7 @@ html,body {
     bottom:34px;/*camina sobre el muelle*/
   }
   
+
   /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
   @keyframes walk {
     /* Partimos de la primera viñeta del sprite sheet */
@@ -28,12 +30,14 @@ html,body {
     100% { background-position:-672px }
   }
   
+
   /* Animación del cielo. Efecto "Parallax", va más lento que el mar. */
   #sky {
     background:url('../img/cielo.jpg') repeat-X;
     animation: movebg 9s linear infinite;
   }
   
+
   /* Animación del mar. */
   #sea {
     background:url('../img/suelo.png') repeat-x;
@@ -45,11 +49,13 @@ html,body {
     box-shadow:10px 10px 45px RGBA(0,0,0, 0.85) inset;
   }
   
+
   /* Animación para mover cielo y mar */
   @keyframes movebg {
     0% { background-position:550px } 
     100% { background-position:0 }
   }
+  
   
   /* OPCIONAL: Guybrush 
   #gb {
