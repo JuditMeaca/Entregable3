@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../animacionesEjemplo3/css/style.css">
-    <title>Entregable 3</title>
-</head>
-<body>
-  <header id="header">
-    <h1>Play with Bernard</h1>
-  </header>
-  <div id="gameContainer">
-    <div id="sky">
-        <div id="ground">
-          <div id="bird"></div>
-          <div id="ball"></div>
-          <div id="bern"></div>
-        </div>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body onkeypress="mover()">
+    <div class="space containerGame" id="game">
+      <div >
+        <div class="planet " id="contain">
+          <div class="person containerGame pos2" id="person"></div>
+          <div class="stars containerGame"></div>
+        </div>
+      </div>
     </div>
-    </div>
-      <!-- <audio id="song">
-        <source src="https://scummbar.com/mi2/DOTT/03%20-%20Busting%20The%20Candy%20Machine.mp3">
-      </audio> -->
-  </div>    
-      <script src="../animacionesEjemplo3/js/js.js"></script>
-</body>
+    <script src="/js/obstaculos.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
 </html>
