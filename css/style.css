@@ -32,7 +32,8 @@ html,body {
     animation:walk .8s steps(6) infinite;
     /* Posicionamos el personaje sobre el camino de madera */
     position: absolute;
-    bottom:34px;/*camina sobre el muelle*/
+    left: 150px;/*para que no quede tan en el borde izq de la pantalla*/
+    bottom:25%;/*camina sobre el muelle*/
   }
   
 
@@ -43,7 +44,7 @@ html,body {
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
     100% { background-position:-672px }
   }
-
+  
   #ball {
     /* Tamaño de la viñeta individual */
     width:112px;
@@ -115,21 +116,3 @@ html,body {
     100% { background-position:0 }
   }
   
-  
-  /* OPCIONAL: Guybrush 
-  #gb {
-    width:104px;
-    height:150px;
-    background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/monkey-guybrush.png) no-repeat;
-    animation:gbwalk 1s steps(6) infinite;
-    margin:auto;
-    position:relative;
-    top:34px;
-    /* Ojo, muy costoso en rendimiento 
-    /* filter:drop-shadow(5px 5px 5px #000); 
-  }
-  
-  @keyframes gbwalk {
-    0% { background-position:0 }
-    100% { background-position:-624px }
-  }*/
