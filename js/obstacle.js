@@ -1,8 +1,8 @@
-class Obstaculo{
-    constructor(pos,tipe,nombre){
-        this.pos=pos;
-        this.tipe=tipe;
-        this.nombre=nombre;
+"use strict";
+
+class Obstacle extends Element{
+    constructor(pos,tipe,name){
+        super(pos,tipe,name);
     }
     addMe(){
         let obs=document.createElement("div");

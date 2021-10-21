@@ -10,13 +10,12 @@ function getPosObs(){
     console.log(personPos.bottom)
  }
  
-//;
 
-let obs=new Obstaculo(1,1,"uno");
+let obs=new Obstacle(1,1,"uno");
 obs.addMe();
-let obs1=new Obstaculo(2,1,"dos");
+let obs1=new Obstacle(2,1,"dos");
 obs1.addMe();
-let obs2=new Obstaculo(3,1,"tres");
+let obs2=new Obstacle(3,1,"tres");
 obs2.addMe();
 
 let game=document.getElementById("game");
@@ -48,7 +47,7 @@ function mover(){
 function colision(){
     let x=obs.getPos();
     if(x.left<=100){
-        //alert("colisiono!!")
+        alert("colisiono!!")
     }
     console.log(x.left);
 }
