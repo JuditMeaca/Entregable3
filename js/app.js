@@ -47,7 +47,7 @@ function mover(){
 function colision(){
     let x=obs.getPos();
     if(x.left<=100){
-        alert("colisiono!!")
+        //alert("colisiono!!")
     }
     console.log(x.left);
 }
