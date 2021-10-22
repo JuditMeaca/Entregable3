@@ -52,4 +52,4 @@ function colision(){
     console.log(x.left);
 }
 
-setInterval(colision,100);
+//setInterval(colision,100);

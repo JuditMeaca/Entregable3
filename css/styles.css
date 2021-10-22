@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.containerGame{
+.containsGame{
   width: 100vw;
   height: 600px;
 }
@@ -12,7 +12,7 @@
   background-size: contain;
   animation: moveSpace 30s linear infinite;
 }
-.planet {
+.planets {
   background: url("../sources/parallax-space-far-planets.png");
   background-size: contain;
   animation: moveSpace 20s linear infinite;
@@ -46,7 +46,7 @@
   height: 200px;
   background-image: url("../sources/asteroid.png");
   background-size: contain;
-  animation: 10s rotate linear infinite;
+  animation: 10s rotate linear;
 }
 @keyframes rotate {
   from {
@@ -58,7 +58,7 @@
     right: 100vw;
   }
 }
-.person {
+.character {
   position: absolute;
   width:100.25px;
   height:96px;
