@@ -13,9 +13,8 @@ class Obstacle extends Element{
         containGame.appendChild(obs);
     }
     getPos(){
-        let me=document.getElementById(this.nombre);
+        let me=document.getElementById(this.name);
         let posMe=me.getBoundingClientRect();
-        
         return posMe;
     }
     
