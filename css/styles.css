@@ -2,25 +2,66 @@
   margin: 0;
   padding: 0;
 }
+header{
+  position: relative;
+  background-image: linear-gradient( 90deg , rgb(181, 54, 128) 100px, rgb(81, 27, 111));
+  border-bottom: 4px solid rgb(48, 186, 153) ;
+  padding-right:40px;
+  padding-left:40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 70px;
+}
+footer{
+    position: relative;
+    background-image: linear-gradient( 90deg , rgb(181, 54, 128) 100px, rgb(81, 27, 111));
+    border-top: 4px solid rgb(48, 186, 153) ;
+    padding-right:40px;
+    padding-left:40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 70px; 
+}
+.links{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width:350px;
+color: white;
+}
+.links a{
+  text-decoration: none;
+  color: rgb(212, 212, 212);
+}
+.links a:hover{
+  text-shadow: 0px 0px 6px rgb(255, 255, 255);
+  color: white;
+}
+
+/************************************************************************************************************/
 .containsGame{
   width: 100vw;
   height: 600px;
 }
 
 .space {
-  background: url("../sources/parallax-space-backgound.png");
+  background: url("../sources/OUTERSPACE.png");
   background-size: contain;
   animation: moveSpace 30s linear infinite;
 }
 .planets {
-  background: url("../sources/parallax-space-far-planets.png");
+  background: url("../sources/planet.png");
   background-size: contain;
   animation: moveSpace 20s linear infinite;
 }
 .stars {
-  background: url("../sources/parallax-space-stars.png");
+  background: url("../sources/stars.png");
   background-size: contain;
-  animation: moveSpace 4s linear infinite;
+  animation: moveSpace 10s linear infinite;
 }
 
 @keyframes moveSpace {
@@ -32,13 +73,13 @@
   }
 }
 .pos1{
-  top: 0px;
+  top: 110px;
 }
 .pos2{
-  top: 200px;
+  top: 310px;
 }
 .pos3{
-  top: 400px;
+  top: 500px;
 }
 .asteroid {
   position: absolute;
@@ -56,6 +97,7 @@
   to {
     transform: rotate(360deg);
     right: 100vw;
+    
   }
 }
 .character {
@@ -73,7 +115,7 @@
   /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
   100% { background-position:-802px }
 }
-/* .person {
+.person {
   position: absolute;
   width:200.5px;
   height:109px;
@@ -88,4 +130,3 @@
 
   100% { background-position:-802px }
 }
-*/
