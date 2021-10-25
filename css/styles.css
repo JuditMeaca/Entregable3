@@ -48,7 +48,7 @@ color: white;
   height: 600px;
 }
 
-.space {
+/* .space {
   background: url("../sources/OUTERSPACE.png");
   background-size: contain;
   animation: moveSpace 30s linear infinite;
@@ -71,7 +71,7 @@ color: white;
   100% {
     background-position: 0;
   }
-}
+} */
 .pos1{
   top: 110px;
 }
@@ -109,7 +109,7 @@ color: white;
  }
 
 .character {
-  width:179.5px;
+  width:180px;
   height:200px;
   background-image: url("../sources/amoung2.png");
   animation: fly 0.8s steps(6) infinite;
@@ -129,7 +129,3 @@ color: white;
   left: 200px;
 }
 
-@keyframes fly {
-  0% { background-position:0 }
-  100% { background-position:-802px }
-}
