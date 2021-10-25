@@ -2,7 +2,7 @@ let elements = [];
 let countObstacles = 0;
 let character;
 let containGame;
-setInterval(verifyCollision,1000);
+
 
 function createObstacle() {
   let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
@@ -15,12 +15,18 @@ function createObstacle() {
 
 function verifyCollision() {
   let characPos = character.getPos();
-  let collisionPoint = characPos.left + characPos.width;
   for (let i = 0; i < elements.length; i++) {
     //recorre todos los elemtos y revisa colicion
     let elemPos = elements[i].getPos();
-    if (elemPos.left <= collisionPoint && collicionY(elemPos,characPos)) 
-        console.log("perdiste")
+    if(elemPos.left<=0){
+      elements[i].deleteMe();
+      elements.splice(i,1);
+    }
+    if (collicionX(elemPos, characPos) && collicionY(elemPos, characPos)) {
+      elements.splice(i,1); 
+
+      console.log(elements.length);
+    }
   }
 }
 function collicionY(objet, characPos) {
@@ -34,10 +40,25 @@ function collicionY(objet, characPos) {
   if (
     (cPosTop >= oPosTop && cPosTop <= oPosBottom) ||
     (cPosBottom >= oPosTop && cPosBottom <= oPosBottom)
-  ){
+  ) {
     return true;
-  }
-  else return false;
+  } else return false;
+}
+
+function collicionX(objet, characPos) {
+  let cPosLeft = characPos.left;
+  let cPosRight = characPos.left + characPos.width;
+  let oPosLeft = objet.left;
+  let oPosRight = objet.left + objet.width;
+  //si la parte superior del personaje esta entre el borde superior y el inferior del obstaculo
+  //o si
+  //si la parte inferior del personaje esta entre el borde superior y el inferior del obstaculo
+  if (
+    (cPosLeft >= oPosLeft && cPosLeft <= oPosRight) ||
+    (cPosRight >= oPosLeft && cPosRight <= oPosRight)
+  ) {
+    return true;
+  } else return false;
 }
 
 function createGame() {
@@ -56,6 +77,7 @@ function createGame() {
   character = new Character();
   character.addMe();
   setInterval(createObstacle, 1000);
+  setInterval(verifyCollision, 1000);
 }
 
 //crea elementos html con la clase containsgamer
@@ -67,6 +89,17 @@ function createContainsGame(elemName) {
   return elem;
 }
 
+
+
+
+function removeMe(id){
+  for(let i=0;i<elements.length;i++){
+    if(elements[i].name==id){
+      elements[i].deleteMe();
+      elements.splice(i);
+    }
+  }
+}
 //llama al metodo mover del personaje con el codigo de tecla para q este actue.
 function moveCharacter() {
   character.move(event.code);

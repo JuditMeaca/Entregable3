@@ -99,21 +99,19 @@ color: white;
 }
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
     right: 0vw;
   }
   to {
-    transform: rotate(360deg);
     right: 100vw;
-    
+    display: hidden;
   }
 }
 .character {
   position: absolute;
-  width:100.25px;
-  height:96px;
+  width:130.25px;
+  height:200px;
   background-image: url("../sources/amoung.png");
-  animation:fly 0.4s steps(8) infinite;
+  animation:fly 1s steps(8) infinite;
   left: 200px;
 }
 

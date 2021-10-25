@@ -9,6 +9,7 @@ class Obstacle extends Element{
         obs.classList.add("blackhole");
         obs.classList.add("pos"+this.pos);
         obs.setAttribute("id",this.name);
+        obs.setAttribute("onanimationend","removeMe("+ this.name +")");
         let containGame=document.getElementById("stars");
         containGame.appendChild(obs);
 
@@ -18,5 +19,10 @@ class Obstacle extends Element{
         let posMe=me.getBoundingClientRect();
         return posMe;
     }
-    
+    deleteMe(){
+        
+        let me= document.getElementById(this.name);
+        let parent = me.parentNode;
+		parent.removeChild(me);
+    }
 }
