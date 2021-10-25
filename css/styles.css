@@ -43,13 +43,15 @@ color: white;
 }
 
 /************************************************************************************************************/
+/* FONDO */
+
 .containsGame{
   width: 100vw;
   height: 600px;
 }
 
-/* .space {
-  background: url("../sources/OUTERSPACE.png");
+.space {
+  background: url("../sources/space.png");
   background-size: contain;
   animation: moveSpace 30s linear infinite;
 }
@@ -71,7 +73,7 @@ color: white;
   100% {
     background-position: 0;
   }
-} */
+}
 .pos1{
   top: 110px;
 }
@@ -82,19 +84,14 @@ color: white;
   top: 500px;
 }
 
-.asteroid {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-image: url("../sources/asteroid.png");
-  background-size: contain;
-  animation: 10s rotate linear;
-}
-.blackhole {
+/***************************************************************************************************************/
+/*OBSTACULOS Y MONEDAS*/
+
+ .blackhole {
    width:199.25px;
    height:200px;
    margin:auto;  
-   /* background:url('../sources/bomb.png'); */
+   background:url('../sources/bomb.png'); 
    animation:rotate 6s steps(8) infinite;
    position: absolute;
  }
@@ -106,9 +103,38 @@ color: white;
   100% {background-position: -1594px;transform: rotate(360deg);
     right: 100vw;
     display: hidden; } 
- }
+ } 
 
-.character {
+ .money {
+  width: 198.625px;
+  height:200px;
+  margin:auto;  
+  background:url('../sources/money.png');
+  animation:float .8s steps(8) infinite;
+  position: absolute;
+  right: 200px;
+}
+
+@keyframes float {
+
+ 0% {background-position: 0px; 
+  } 
+ 100% {background-position: -1589px;
+  } 
+}
+/* @keyframes timing {
+  0% {
+    right: 0vw;} 
+
+  100% {
+    right: 100vw;
+    display: hidden; } 
+ }   */
+
+/***************************************************************************************************/
+/*PERSONAJES*/
+
+.character2 {
   width:180px;
   height:200px;
   background-image: url("../sources/amoung2.png");
@@ -116,16 +142,25 @@ color: white;
   left: 200px;
   position: absolute;
 }
+
+.character {
+  width:180px;
+  height:200px;
+  background-image: url("../sources/amoung.png");
+  animation: fly 0.8s steps(6) infinite;
+  left: 200px;
+  position: absolute;
+}
+
 @keyframes fly {
   0% { background-position: 0 px }
   100% { background-position: -1089px }
 }
-.person {
-  position: absolute;
-  width:200.5px;
-  height:109px;
-  background-image: url("../sources/rocket.png");
-  animation:fly 0.6s steps(8) infinite;
-  left: 200px;
-}
+
+
+
+
+
+
+
 

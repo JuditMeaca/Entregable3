@@ -8,15 +8,23 @@ class Bonus extends Element {
 
     addMe(){
         let bon=document.createElement("div");
-        bon.classList.add("coin");
-        bon.classList.add("pos"+this.pos);
-        bon.setAttribute("id",this.name);
-        contain.appendChild(bon);
+        obs.classList.add("money");
+        obs.classList.add("pos"+this.pos);
+        obs.setAttribute("id",this.name);
+        obs.setAttribute("onanimationend","removeMe("+ this.name +")");
+        let containGame=document.getElementById("stars");
+        containGame.appendChild(bon);
     }
     getPos(){
         let me=document.getElementById(this.name);
         let posMe=me.getBoundingClientRect();
         
         return posMe;
+    }
+    deleteMe(){
+        
+        let me= document.getElementById(this.name);
+        let parent = me.parentNode;
+		parent.removeChild(me);
     }
 }
