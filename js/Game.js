@@ -89,9 +89,6 @@ function createContainsGame(elemName) {
   return elem;
 }
 
-
-
-
 function removeMe(id){
   for(let i=0;i<elements.length;i++){
     if(elements[i].name==id){

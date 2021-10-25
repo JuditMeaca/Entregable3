@@ -90,49 +90,45 @@ color: white;
   animation: 10s rotate linear;
 }
 .blackhole {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-image: url("../sources/black.png");
-  background-size: contain;
-  animation: 10s rotate linear;
-}
-@keyframes rotate {
-  from {
-    right: 0vw;
-  }
-  to {
+   width:199.25px;
+   height:200px;
+   margin:auto;  
+   background:url('../sources/bomb.png');
+   animation:rotate 6s steps(8) infinite;
+   position: absolute;
+ }
+
+ @keyframes rotate {
+  0% {background-position: 0;  transform: rotate(0deg);
+    right: 0vw;} 
+
+  100% {background-position: -1594px;transform: rotate(360deg);
     right: 100vw;
-    display: hidden;
-  }
-}
+    display: hidden; } 
+ }
+
 .character {
-  position: absolute;
-  width:130.25px;
+  width:209px;
   height:200px;
   background-image: url("../sources/amoung.png");
-  animation:fly 1s steps(8) infinite;
+  animation:fly 0.4s steps(8) infinite;
   left: 200px;
+  position: absolute;
 }
-
 @keyframes fly {
-  /* Partimos de la primera viñeta del sprite sheet */
   0% { background-position:0 }
-  /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-  100% { background-position:-802px }
+  100% { background-position:-1672px }
 }
 .person {
   position: absolute;
   width:200.5px;
   height:109px;
   background-image: url("../sources/rocket.png");
-  animation:fly 0.6s steps(4) infinite;
+  animation:fly 0.6s steps(8) infinite;
   left: 200px;
 }
 
 @keyframes fly {
-  
   0% { background-position:0 }
-
   100% { background-position:-802px }
 }
