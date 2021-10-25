@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
+
 header{
   position: relative;
   background-image: linear-gradient( 90deg , rgb(181, 54, 128) 100px, rgb(81, 27, 111));
@@ -48,6 +50,7 @@ color: white;
 .containsGame{
   width: 100vw;
   height: 600px;
+ 
 }
 
 .space {
@@ -105,6 +108,29 @@ color: white;
     display: hidden; } 
  } 
 
+ /* .blackhole{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url("../sources/obsRed.png");
+  background-size: contain;
+  animation: 10s rotate linear;
+ }
+
+ @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    right: 0vw;
+
+  }
+  to {
+    transform: rotate(360deg);
+    right: 100vw;
+    display: hidden;
+  }
+} */
+
+
  .money {
   width: 198.625px;
   height:200px;
@@ -157,6 +183,19 @@ color: white;
   100% { background-position: -1089px }
 }
 
+.characterJump {
+  width:179px;
+  height:169px;
+  background-image: url("../sources/giro.png");
+  animation: jump 0.1s steps(6) infinite;
+  left: 200px;
+  position: absolute;
+}
+
+@keyframes jump {
+  0% { background-position: 0 px }
+  100% { background-position: -1089px }
+}
 
 
 
