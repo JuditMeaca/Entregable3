@@ -17,7 +17,15 @@ header{
   height: 70px;
 }
 .btnAvatar{
-
+  background-color: rgb(48, 186, 153);
+  border: 1px solid black;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 

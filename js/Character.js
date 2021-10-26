@@ -4,28 +4,6 @@ class Character {
         this.name = "character";
     }
 
-
-    // let btn1= document.getElementById("avatar1");
-    // btn1.addEventListener('click',avatarRed);
-
-
-    // let btn2 = document.getElementById("avatar2");
-    // btn2.addEventListener('click',avatarBlue);
-
-
-    // function avatarRed() {
-    //     fondo.setAttribute("class","avatar1");
-    //     sol.classList.remove("sol");
-    // }
-
-
-    // function fondoDia() {
-    //     sol.setAttribute("class", "sol");
-    //     fondo.setAttribute("class", "contenedor");
-    // }
-
-
-
     addMe() {
 
         let obs = document.createElement("div");
