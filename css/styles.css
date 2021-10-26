@@ -108,7 +108,7 @@ color: white;
 font-family: Arial, Helvetica, sans-serif;
 }
 .timer{
-  background-color:white; width:300px;height:50px;
+  background-color:grey; width:300px;height:50px;
   position:fixed;
 }
 .timer span{
@@ -133,7 +133,7 @@ font-family: Arial, Helvetica, sans-serif;
   text-align:center;
   line-height:50px;
   font-size:25px;
-  color:red;
+  color:white;
   font-weight:bold;
   
 }
@@ -253,19 +253,20 @@ font-family: Arial, Helvetica, sans-serif;
   100% { background-position: -1089px }
 }
 
-.characterJump {
-  width:179px;
-  height:169px;
-  background-image: url("../sources/giro.png");
-  animation: jump 0.1s steps(6) infinite;
+/* .characterJump {
+  width:128px;
+  height:131px;
+  background-image: url("../sources/jumpBlue.png");
+  animation: jump 0.1s steps(2) infinite;
   left: 200px;
   position: absolute;
 }
 
 @keyframes jump {
   0% { background-position: 0 px }
-  100% { background-position: -1089px }
-}
+  100% { background-position: -256px }
+} */
+
 .hidden{
   display:hidden;
 }

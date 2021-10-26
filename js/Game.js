@@ -50,6 +50,7 @@ function verifyCollision() {
   for (let i = 0; i < elements.length; i++) {
     //recorre todos los elemtos y revisa colicion
     let elemPos = elements[i].getPos();
+  
     if (elemPos.left <= 0) {
       elements[i].deleteMe();
       elements.splice(i, 1);

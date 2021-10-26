@@ -4,6 +4,7 @@ class Character {
         this.name = "character";
     }
 
+
     addMe() {
 
         let obs = document.createElement("div");
