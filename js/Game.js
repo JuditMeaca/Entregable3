@@ -3,6 +3,8 @@ let countObstacles = 0;
 let character;
 let containGame;
 let tipeGame = 1;
+
+
 function createObstacle() {
   let obs;
   if (tipeGame == 1) {

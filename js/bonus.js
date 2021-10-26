@@ -22,7 +22,7 @@ class Bonus extends Element{
     deleteMe(){
         console.log("soy: " + this.name)
         let me= document.getElementById(this.name);
-        me.classList.remove("blackhole");
+        me.classList.remove("money");
         let parent = me.parentNode;
 		parent.removeChild(me);
     }

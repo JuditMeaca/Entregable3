@@ -16,6 +16,11 @@ header{
   font-family: Arial, Helvetica, sans-serif;
   height: 70px;
 }
+.btnAvatar{
+
+}
+
+
 footer{
     position: relative;
     background-image: linear-gradient( 90deg , rgb(181, 54, 128) 100px, rgb(81, 27, 111));
@@ -193,16 +198,17 @@ font-family: Arial, Helvetica, sans-serif;
   height:200px;
   margin:auto;  
   background:url('../sources/money.png');
-  animation:float .8s steps(8) infinite;
+  animation:float 10s steps(8) infinite;
   position: absolute;
   right: 200px;
 }
 
 @keyframes float {
 
- 0% {background-position: 0px; 
+ 0% {background-position: 0px; right: 0vw;
   } 
- 100% {background-position: -1589px;
+ 100% {background-position: -1589px;right: 100vw;
+  display: hidden;
   } 
 }
 /* @keyframes timing {
