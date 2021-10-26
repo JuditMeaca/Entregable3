@@ -267,6 +267,22 @@ font-family: Arial, Helvetica, sans-serif;
   100% { background-position: -256px }
 } */
 
+.collision {
+  width:132.4px;
+  height:129px;
+  margin:auto;  
+  background:url('../sources/collision.png'); 
+  animation:collision .7s steps(5) infinite;
+  
+}
+
+@keyframes collision {
+ 0% {background-position: 0;} 
+
+ 100% {background-position: -662px;
+   display: hidden; } 
+} 
+
 .hidden{
   display:hidden;
 }
