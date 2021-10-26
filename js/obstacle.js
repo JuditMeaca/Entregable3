@@ -20,8 +20,9 @@ class Obstacle extends Element{
         return posMe;
     }
     deleteMe(){
-        
+        console.log("soy: " + this.name)
         let me= document.getElementById(this.name);
+        me.classList.remove("blackhole");
         let parent = me.parentNode;
 		parent.removeChild(me);
     }

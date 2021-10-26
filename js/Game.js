@@ -2,15 +2,45 @@ let elements = [];
 let countObstacles = 0;
 let character;
 let containGame;
-
-
+let tipeGame = 1;
 function createObstacle() {
-  let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
-  let tipe = Math.floor(Math.random() * (3 - 1)) + 1; //asigna un modelo de obs entre 1 y 2
-  countObstacles++;
-  let obs = new Obstacle(row, tipe, countObstacles);
-  obs.addMe();
-  elements.push(obs); //agrega el obstaculo a la lista de elementos
+  let obs;
+  if (tipeGame == 1) {
+    if (Math.floor(Math.random() * (101 - 1)) >= 80) {
+      let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
+      countObstacles++;
+      console.log("creo un bonus");
+      obs = new Bonus(row, 1, countObstacles);
+      obs.addMe();
+      elements.push(obs); //agrega el obstaculo a la lista de elementos
+    } else {
+      let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
+      let tipe = Math.floor(Math.random() * (3 - 1)) + 1; //asigna un modelo de obs entre 1 y 2
+      countObstacles++;
+
+      console.log("creo un obstaculo");
+      obs = new Obstacle(row, tipe, countObstacles);
+      obs.addMe();
+      elements.push(obs); //agrega el obstaculo a la lista de elementos
+    }
+  } else {
+    if (Math.floor(Math.random() * (101 - 1)) >= 80) {
+      let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
+      countObstacles++;
+      obs = new Bonus(row, 1, countObstacles);
+      obs.addMe();
+      elements.push(obs); //agrega el obstaculo a la lista de elementos
+    } else {
+      let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
+      let tipe = Math.floor(Math.random() * (5 - 2)) + 1; //asigna un modelo de obs entre 1 y 2
+      countObstacles++;
+      obs = new Obstacle(row, tipe, countObstacles);
+      obs.addMe();
+      elements.push(obs); //agrega el obstaculo a la lista de elementos
+    }
+    obs.addMe();
+    elements.push(obs); //agrega el obstaculo a la lista de elementos
+  }
 }
 
 function verifyCollision() {
@@ -18,14 +48,15 @@ function verifyCollision() {
   for (let i = 0; i < elements.length; i++) {
     //recorre todos los elemtos y revisa colicion
     let elemPos = elements[i].getPos();
-    if(elemPos.left<=0){
+    if (elemPos.left <= 0) {
       elements[i].deleteMe();
-      elements.splice(i,1);
-    }
-    if (collicionX(elemPos, characPos) && collicionY(elemPos, characPos)) {
-      elements.splice(i,1); 
-
-      console.log(elements.length);
+      elements.splice(i, 1);
+    } else if (
+      collicionX(elemPos, characPos) &&
+      collicionY(elemPos, characPos)
+    ) {
+      elements[i].deleteMe();
+      elements.splice(i, 1);
     }
   }
 }
@@ -62,22 +93,39 @@ function collicionX(objet, characPos) {
 }
 
 function createGame() {
-  //creo el espacio
-  let space = createContainsGame("space");
-  //creo los planetas y los agrego dentro del espacio
-  let planets = createContainsGame("planets");
-  space.appendChild(planets);
-  //creo las estrellas y los agrego dentro del planetas
-  let stars = createContainsGame("stars");
-  planets.appendChild(stars);
-  //agrego todas las reaciones al DOM;
-  let body = document.getElementById("body");
-  body.appendChild(space);
-  containGame = document.getElementById("stars");
-  character = new Character();
-  character.addMe();
+  if (tipeGame == 1) {
+    //creo el espacio
+    let space = createContainsGame("space");
+    //creo los planetas y los agrego dentro del espacio
+    let planets = createContainsGame("planets");
+    space.appendChild(planets);
+    //creo las estrellas y los agrego dentro del planetas
+    let stars = createContainsGame("stars");
+    planets.appendChild(stars);
+    //agrego todas las reaciones al DOM;
+    let body = document.getElementById("body");
+    body.appendChild(space);
+    containGame = document.getElementById("stars");
+    character = new Character();
+    character.addMe();
+  } else {
+    //creo el espacio
+    let space = createContainsGame("space");
+    //creo los planetas y los agrego dentro del espacio
+    let planets = createContainsGame("planets");
+    space.appendChild(planets);
+    //creo las estrellas y los agrego dentro del planetas
+    let stars = createContainsGame("stars");
+    planets.appendChild(stars);
+    //agrego todas las reaciones al DOM;
+    let body = document.getElementById("body");
+    body.appendChild(space);
+    containGame = document.getElementById("stars");
+    character = new Character();
+    character.addMe();
+  }
   setInterval(createObstacle, 1000);
-  setInterval(verifyCollision, 1000);
+  setInterval(verifyCollision, 100);
 }
 
 //crea elementos html con la clase containsgamer
@@ -89,9 +137,9 @@ function createContainsGame(elemName) {
   return elem;
 }
 
-function removeMe(id){
-  for(let i=0;i<elements.length;i++){
-    if(elements[i].name==id){
+function removeMe(id) {
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].name == id) {
       elements[i].deleteMe();
       elements.splice(i);
     }

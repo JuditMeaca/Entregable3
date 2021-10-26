@@ -95,7 +95,7 @@ color: white;
    height:200px;
    margin:auto;  
    background:url('../sources/bomb.png'); 
-   animation:rotate 6s steps(8) infinite;
+   animation:rotate 6s steps(8) ;
    position: absolute;
  }
 
@@ -196,7 +196,9 @@ color: white;
   0% { background-position: 0 px }
   100% { background-position: -1089px }
 }
-
+.hidden{
+  display:hidden;
+}
 
 
 
