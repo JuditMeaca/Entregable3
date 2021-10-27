@@ -30,7 +30,8 @@ class Bonus extends Element{
         let scoreBox=document.getElementById("score");
         let score=parseInt(scoreBox.innerHTML)
         scoreBox.innerHTML= score + 10;
-
-
+    }
+    iAmABonus(){
+        return true;
     }
 }

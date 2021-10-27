@@ -36,7 +36,9 @@ function verifyCollision() {
       collicionX(elemPos, characPos) &&
       collicionY(elemPos, characPos)
     ) {
+      if(elements[i].iAmABonus()){
       character.takeMoney();
+      }
       elements[i].onCollicion();
       elements[i].deleteMe();
       elements.splice(i, 1);

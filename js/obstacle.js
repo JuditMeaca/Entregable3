@@ -38,4 +38,7 @@ class Obstacle extends Element{
         scoreBox.innerHTML= score - 10;
         
     }
+    iAmABonus(){
+        return false;
+    }
 }
