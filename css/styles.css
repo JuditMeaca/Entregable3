@@ -159,6 +159,15 @@ font-family: Arial, Helvetica, sans-serif;
    animation:rotate 6s steps(8) ;
    position: absolute;
  }
+
+ .blackhole2 {
+  width:199.25px;
+  height:200px;
+  margin:auto;  
+  background:url('../sources/bomb2.png'); 
+  animation:rotate 6s steps(8) ;
+  position: absolute;
+}
  @keyframes rotate {
   0% {background-position: 0;  transform: rotate(0deg);
     right: 0vw;} 
@@ -167,28 +176,13 @@ font-family: Arial, Helvetica, sans-serif;
     right: 100vw;
     display: hidden; } 
  } 
- .asteroid{
-  width: 150px;
-  height: 150px;
-  background-image: url("../sources/asteroide.png");
-  background-size: contain;
-  animation: 10s rotate linear;
- }
- @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-    right: 0vw;
-  }
-  to {
-    transform: rotate(360deg);
-    right: 100vw;
-    display: hidden;
-  }
-} 
+ 
 .money {
   width: 198.625px;
   height:200px;
   margin:auto;  
+  transform: rotate(360deg);
+  transition-property: transform .5s linear;
   background:url('../sources/money.png');
   animation:float 10s steps(8) infinite;
   position: absolute;
@@ -230,7 +224,7 @@ font-family: Arial, Helvetica, sans-serif;
   top: 500px;
 } */
 /***************************************************************************************************/
-/*PERSONAJES*/
+/*PERSONAJES Y COLLISION*/
 
 .character {
   width:132.25px;
@@ -252,27 +246,26 @@ font-family: Arial, Helvetica, sans-serif;
   0% { background-position: 0px }
   100% { background-position: -529px }
 }
-.characterJumbR {
-  width:128px;
-  height:131px;
-  background-image: url("../sources/jumpRed.png");
-  animation: jump 0.1s steps(1) infinite;
+.characterMoney {
+  width:132.25px;
+  height:147px;
+  background-image: url("../sources/getMoney.png");
+  animation: getMoney 0.5s steps(4) infinite;
   left: 200px;
   position: absolute;
 }
-.characterJumpB {
-  width:128px;
-  height:131px;
-  background-image: url("../sources/jumpBlue.png");
-  animation: jump 0.1s steps(1) infinite;
+.character2Money {
+  width:132.25px;
+  height:147px;
+  background-image: url("../sources/getMoney2.png");
+  animation: getMoney 0.5s steps(4) infinite;
   left: 200px;
   position: absolute;
 }
-
-@keyframes jump {
+@keyframes getMoney {
   0% { background-position: 0px }
-  100% { background-position: -256px }
-} 
+  100% { background-position: -529px }
+}
 .collision {
   width:132.4px;
   height:129px;

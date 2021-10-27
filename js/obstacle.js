@@ -29,6 +29,7 @@ class Obstacle extends Element{
     onCollicion(){
         let scoreBox=document.getElementById("score");
         let score=parseInt(scoreBox.innerHTML)
-        scoreBox.innerHTML=score-10;
+        scoreBox.innerHTML= score - 10;
+        
     }
 }

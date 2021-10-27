@@ -23,7 +23,8 @@ function createObstacle() {
       obs.addMe();
       elements.push(obs); //agrega el obstaculo a la lista de elementos
     }
-  } else {
+  } 
+  else {
     if (Math.floor(Math.random() * (101 - 1)) >= 80) {
       let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
       countObstacles++;
@@ -152,3 +153,4 @@ function moveCharacter() {
   character.move(event.code);
 }
 window.onload = createGame();
+
