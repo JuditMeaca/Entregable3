@@ -34,4 +34,5 @@ class Bonus extends Element{
     iAmABonus(){
         return true;
     }
+  
 }

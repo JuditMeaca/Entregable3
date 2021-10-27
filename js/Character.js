@@ -15,7 +15,7 @@ class Character {
              if(obs.classList.contains("character2"))
              obs.classList.remove("character2");
             obs.classList.add("character");
-            console.log(obs)
+           
          });
 
 
@@ -24,7 +24,7 @@ class Character {
             if(obs.classList.contains("character"))
             obs.classList.remove("character");
            obs.classList.add("character2");
-           console.log(obs)
+           
          });
 
         
@@ -80,6 +80,32 @@ class Character {
             setTimeout(this.remplaceClass,500,"character2Money","character2");
         }
     }
+    takeMoney(){
+        let me=document.getElementById("character");
+        if(me.classList.contains("character")){
+            me.classList.remove("character");
+            me.classList.add("characterMoney");
+            setTimeout(this.remplaceClass,500,"characterMoney","character");
+        }else {
+            me.classList.remove("character2");
+            me.classList.add("character2Money");
+            setTimeout(this.remplaceClass,500,"character2Money","character2");
+        }
+    }
+
+    collision(){
+        let me=document.getElementById("character");
+        if(me.classList.contains("character")){
+            me.classList.remove("character");
+            me.classList.add("collision");
+            setTimeout(this.remplaceClass,500,"collision","character");
+        }else {
+            me.classList.remove("character2");
+            me.classList.add("collision");
+            setTimeout(this.remplaceClass,500,"collision","character2");
+        }
+    }
+
     remplaceClass(ab,aa){
         let me=document.getElementById("character");
         me.classList.remove(ab);

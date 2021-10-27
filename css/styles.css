@@ -154,7 +154,6 @@ font-family: Arial, Helvetica, sans-serif;
  .blackhole {
    width:150px;
    height:151px;
-    border: 1px solid red;
    margin:auto;  
    background:url('../sources/bomb.png'); 
    animation:rotate 8s steps(8) ;
@@ -164,7 +163,6 @@ font-family: Arial, Helvetica, sans-serif;
  .blackhole2 {
   width:150px;
   height:151px;
-   border: 1px solid red;
   margin:auto;  
   background:url('../sources/bomb2.png'); 
   animation:rotate 8s steps(8) ;
@@ -183,7 +181,6 @@ font-family: Arial, Helvetica, sans-serif;
   width: 150px;
   height:151px;
   margin:auto;  
-  border: 1px solid red;
   transition-property: transform .5s linear;
   background:url('../sources/money.png');
   animation:float 8s steps(8);

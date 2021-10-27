@@ -39,6 +39,9 @@ function verifyCollision() {
       if(elements[i].iAmABonus()){
       character.takeMoney();
       }
+      else{
+        character.collision();
+      }
       elements[i].onCollicion();
       elements[i].deleteMe();
       elements.splice(i, 1);

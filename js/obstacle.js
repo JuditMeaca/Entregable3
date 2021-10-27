@@ -41,4 +41,5 @@ class Obstacle extends Element{
     iAmABonus(){
         return false;
     }
+   
 }
