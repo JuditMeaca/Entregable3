@@ -89,15 +89,7 @@ color: white;
     background-position: 0;
   }
 }
-.pos1{
-  top: 110px;
-}
-.pos2{
-  top: 310px;
-}
-.pos3{
-  top: 500px;
-}
+
 .sum{
 position:fixed; 
 left:45%; 
@@ -167,7 +159,6 @@ font-family: Arial, Helvetica, sans-serif;
    animation:rotate 6s steps(8) ;
    position: absolute;
  }
-
  @keyframes rotate {
   0% {background-position: 0;  transform: rotate(0deg);
     right: 0vw;} 
@@ -176,31 +167,25 @@ font-family: Arial, Helvetica, sans-serif;
     right: 100vw;
     display: hidden; } 
  } 
-
- /* .blackhole{
-  position: absolute;
+ .asteroid{
   width: 150px;
   height: 150px;
-  background-image: url("../sources/obsRed.png");
+  background-image: url("../sources/asteroide.png");
   background-size: contain;
   animation: 10s rotate linear;
  }
-
  @keyframes rotate {
   from {
     transform: rotate(0deg);
     right: 0vw;
-
   }
   to {
     transform: rotate(360deg);
     right: 100vw;
     display: hidden;
   }
-} */
-
-
- .money {
+} 
+.money {
   width: 198.625px;
   height:200px;
   margin:auto;  
@@ -209,7 +194,6 @@ font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   right: 200px;
 }
-
 @keyframes float {
  0% {background-position: 0px; right: 0vw;
   } 
@@ -217,71 +201,93 @@ font-family: Arial, Helvetica, sans-serif;
   display: hidden;
   } 
 }
-/* @keyframes timing {
-  0% {
-    right: 0vw;} 
-
-  100% {
-    right: 100vw;
-    display: hidden; } 
- }   */
-
+.pos1{
+  transform: translateY(-10%) rotate(-360deg);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+ 
+}
+.pos2{
+  transform: translateY(150%);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+.pos3{
+  transform: translateY(300%) rotate(360deg);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+/* .pos1{
+  top: 110px;
+}
+.pos2{
+  top: 310px;
+}
+.pos3{
+  top: 500px;
+} */
 /***************************************************************************************************/
 /*PERSONAJES*/
 
-.character2 {
-  width:180px;
-  height:200px;
-  background-image: url("../sources/amoung2.png");
-  animation: fly 0.8s steps(6) infinite;
-  left: 200px;
-  position: absolute;
-}
-
 .character {
-  width:180px;
-  height:200px;
-  background-image: url("../sources/amoung.png");
-  animation: fly 0.8s steps(6) infinite;
+  width:132.25px;
+  height:147px;
+  background-image: url("../sources/amoun.png");
+  animation: fly 0.8s steps(4) infinite;
   left: 200px;
   position: absolute;
 }
-
-@keyframes fly {
-  0% { background-position: 0 px }
-  100% { background-position: -1089px }
+.character2 {
+  width:132.25px;
+  height:147px;
+  background-image: url("../sources/amoun2.png");
+  animation: fly 0.8s steps(4) infinite;
+  left: 200px;
+  position: absolute;
 }
-
-/* .characterJump {
+@keyframes fly {
+  0% { background-position: 0px }
+  100% { background-position: -529px }
+}
+.characterJumbR {
+  width:128px;
+  height:131px;
+  background-image: url("../sources/jumpRed.png");
+  animation: jump 0.1s steps(1) infinite;
+  left: 200px;
+  position: absolute;
+}
+.characterJumpB {
   width:128px;
   height:131px;
   background-image: url("../sources/jumpBlue.png");
-  animation: jump 0.1s steps(2) infinite;
+  animation: jump 0.1s steps(1) infinite;
   left: 200px;
   position: absolute;
 }
 
 @keyframes jump {
-  0% { background-position: 0 px }
+  0% { background-position: 0px }
   100% { background-position: -256px }
-} */
-
+} 
 .collision {
   width:132.4px;
   height:129px;
   margin:auto;  
   background:url('../sources/collision.png'); 
   animation:collision .7s steps(5) infinite;
-  
+  left: 200px;
+  position: absolute; 
 }
-
 @keyframes collision {
  0% {background-position: 0;} 
 
  100% {background-position: -662px;
    display: hidden; } 
 } 
-
 .hidden{
   display:hidden;
 }

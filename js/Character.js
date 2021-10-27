@@ -40,6 +40,7 @@ class Character {
                 if (character.classList.contains("pos3")) {
                     character.classList.remove("pos3")
                     character.classList.add("pos2")
+                    
                 } else if (character.classList.contains("pos2")) {
                     character.classList.remove("pos2")
                     character.classList.add("pos1")
