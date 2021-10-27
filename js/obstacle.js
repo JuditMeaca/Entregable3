@@ -5,8 +5,14 @@ class Obstacle extends Element{
         super(pos,tipe,name);
     }
     addMe(){
+        let bHclass;
         let obs=document.createElement("div");
-        obs.classList.add("blackhole");
+        if(this.tipe==1){
+            bHclass="blackhole";
+        }else{
+            bHclass="blackhole2";
+        }
+        obs.classList.add(bHclass);
         obs.classList.add("elementPos"+this.pos);
         obs.setAttribute("id",this.name);
         obs.setAttribute("onanimationend","removeMe("+ this.name +")");
