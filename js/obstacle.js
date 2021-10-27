@@ -7,7 +7,7 @@ class Obstacle extends Element{
     addMe(){
         let obs=document.createElement("div");
         obs.classList.add("blackhole");
-        obs.classList.add("pos"+this.pos);
+        obs.classList.add("elementPos"+this.pos);
         obs.setAttribute("id",this.name);
         obs.setAttribute("onanimationend","removeMe("+ this.name +")");
         let containGame=document.getElementById("stars");

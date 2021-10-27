@@ -214,15 +214,15 @@ font-family: Arial, Helvetica, sans-serif;
   transition-duration: .5s;
   transition-timing-function: linear;
 }
-/* .pos1{
+.elementPos1{
   top: 110px;
 }
-.pos2{
+.elementPos2{
   top: 310px;
 }
-.pos3{
+.elementPos3{
   top: 500px;
-} */
+}
 /***************************************************************************************************/
 /*PERSONAJES Y COLLISION*/
 
