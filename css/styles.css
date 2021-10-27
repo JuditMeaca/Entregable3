@@ -157,7 +157,7 @@ font-family: Arial, Helvetica, sans-serif;
     border: 1px solid red;
    margin:auto;  
    background:url('../sources/bomb.png'); 
-   animation:rotate 6s steps(8) ;
+   animation:rotate 8s steps(8) ;
    position: absolute;
  }
 
@@ -167,15 +167,15 @@ font-family: Arial, Helvetica, sans-serif;
    border: 1px solid red;
   margin:auto;  
   background:url('../sources/bomb2.png'); 
-  animation:rotate 6s steps(8) ;
+  animation:rotate 8s steps(8) ;
   position: absolute;
 }
  @keyframes rotate {
   0% {background-position: 0;
-    right: 0vw;} 
+    right: -10vw;} 
 
   100% {background-position: -1200px;
-    right: 100vw;
+    right: 110vw;
     display: hidden; } 
  } 
  
@@ -186,14 +186,14 @@ font-family: Arial, Helvetica, sans-serif;
   border: 1px solid red;
   transition-property: transform .5s linear;
   background:url('../sources/money.png');
-  animation:float 10s steps(8) infinite;
+  animation:float 8s steps(8);
   position: absolute;
   right: 200px;
 }
 @keyframes float {
- 0% {background-position: 0px; right: 0vw;
+ 0% {background-position: 0px; right: -10vw;
   } 
- 100% {background-position: -1200px;right: 100vw;
+ 100% {background-position: -1200px;right: 110vw;
   display: hidden;
   } 
 }

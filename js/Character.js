@@ -62,4 +62,10 @@ class Character {
         let posMe = me.getBoundingClientRect();
         return posMe;
     }
+
+    deleteMe(){
+        let me=document.getElementById("character");
+        let parent=me.parentNode;
+        parent.removeChild(me);
+    }
 }
