@@ -68,4 +68,21 @@ class Character {
         let parent=me.parentNode;
         parent.removeChild(me);
     }
+    takeMoney(){
+        let me=document.getElementById("character");
+        if(me.classList.contains("character")){
+            me.classList.remove("character");
+            me.classList.add("characterMoney");
+            setTimeout(this.remplaceClass,500,"characterMoney","character");
+        }else {
+            me.classList.remove("character2");
+            me.classList.add("character2Money");
+            setTimeout(this.remplaceClass,500,"character2Money","character2");
+        }
+    }
+    remplaceClass(ab,aa){
+        let me=document.getElementById("character");
+        me.classList.remove(ab);
+        me.classList.add(aa);
+    }
 }
