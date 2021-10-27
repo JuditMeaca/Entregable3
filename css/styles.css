@@ -152,8 +152,8 @@ font-family: Arial, Helvetica, sans-serif;
 /*OBSTACULOS Y MONEDAS*/
 
  .blackhole {
-   width:199.25px;
-   height:200px;
+   width:150px;
+   height:151px;
    margin:auto;  
    background:url('../sources/bomb.png'); 
    animation:rotate 6s steps(8) ;
@@ -161,8 +161,8 @@ font-family: Arial, Helvetica, sans-serif;
  }
 
  .blackhole2 {
-  width:199.25px;
-  height:200px;
+  width:150px;
+  height:151px;
   margin:auto;  
   background:url('../sources/bomb2.png'); 
   animation:rotate 6s steps(8) ;
@@ -172,14 +172,14 @@ font-family: Arial, Helvetica, sans-serif;
   0% {background-position: 0;  transform: rotate(0deg);
     right: 0vw;} 
 
-  100% {background-position: -1594px;transform: rotate(360deg);
+  100% {background-position: -1200px;transform: rotate(360deg);
     right: 100vw;
     display: hidden; } 
  } 
  
 .money {
-  width: 198.625px;
-  height:200px;
+  width: 150px;
+  height:151px;
   margin:auto;  
   transform: rotate(360deg);
   transition-property: transform .5s linear;
@@ -191,7 +191,7 @@ font-family: Arial, Helvetica, sans-serif;
 @keyframes float {
  0% {background-position: 0px; right: 0vw;
   } 
- 100% {background-position: -1589px;right: 100vw;
+ 100% {background-position: -1200px;right: 100vw;
   display: hidden;
   } 
 }
