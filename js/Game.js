@@ -11,7 +11,7 @@ function createObstacle() {
     if (Math.floor(Math.random() * (101 - 1)) >= 80) {
       let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
       countObstacles++;
-      console.log("creo un bonus");
+  
       obs = new Bonus(row, 1, countObstacles);
       obs.addMe();
       elements.push(obs); //agrega el obstaculo a la lista de elementos
@@ -19,8 +19,6 @@ function createObstacle() {
       let row = Math.floor(Math.random() * (4 - 1)) + 1; //asigna una fila entre 1 y 3
       let tipe = Math.floor(Math.random() * (3 - 1)) + 1; //asigna un modelo de obs entre 1 y 2
       countObstacles++;
-
-      console.log("creo un obstaculo");
       obs = new Obstacle(row, tipe, countObstacles);
       obs.addMe();
       elements.push(obs); //agrega el obstaculo a la lista de elementos
@@ -58,6 +56,7 @@ function verifyCollision() {
       collicionX(elemPos, characPos) &&
       collicionY(elemPos, characPos)
     ) {
+      elements[i].onCollicion();
       elements[i].deleteMe();
       elements.splice(i, 1);
     }

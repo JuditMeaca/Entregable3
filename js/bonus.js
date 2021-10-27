@@ -20,10 +20,15 @@ class Bonus extends Element{
         return posMe;
     }
     deleteMe(){
-        console.log("soy: " + this.name)
+    
         let me= document.getElementById(this.name);
         me.classList.remove("money");
         let parent = me.parentNode;
 		parent.removeChild(me);
+    }
+    onCollicion(){
+        let scoreBox=document.getElementById("score");
+        let score=parseInt(scoreBox.innerHTML)
+        scoreBox.innerHTML=score+10;
     }
 }
