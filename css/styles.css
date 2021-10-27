@@ -89,15 +89,7 @@ color: white;
     background-position: 0;
   }
 }
-.pos1{
-  top: 110px;
-}
-.pos2{
-  top: 310px;
-}
-.pos3{
-  top: 500px;
-}
+
 .sum{
 position:fixed; 
 left:45%; 
@@ -210,7 +202,34 @@ font-family: Arial, Helvetica, sans-serif;
   display: hidden;
   } 
 }
-
+.pos1{
+  transform: translateY(-10%) rotate(-360deg);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+ 
+}
+.pos2{
+  transform: translateY(150%);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+.pos3{
+  transform: translateY(300%) rotate(360deg);
+  transition-property: transform;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+/* .pos1{
+  top: 110px;
+}
+.pos2{
+  top: 310px;
+}
+.pos3{
+  top: 500px;
+} */
 /***************************************************************************************************/
 /*PERSONAJES*/
 
@@ -238,7 +257,7 @@ font-family: Arial, Helvetica, sans-serif;
   width:128px;
   height:131px;
   background-image: url("../sources/jumpRed.png");
-  animation: jump 0.1s steps(2) infinite;
+  animation: jump 0.1s steps(1) infinite;
   left: 200px;
   position: absolute;
 }
@@ -246,13 +265,13 @@ font-family: Arial, Helvetica, sans-serif;
   width:128px;
   height:131px;
   background-image: url("../sources/jumpBlue.png");
-  animation: jump 0.1s steps(2) infinite;
+  animation: jump 0.1s steps(1) infinite;
   left: 200px;
   position: absolute;
 }
 
 @keyframes jump {
-  0% { background-position: 0 px }
+  0% { background-position: 0px }
   100% { background-position: -256px }
 } 
 .collision {
