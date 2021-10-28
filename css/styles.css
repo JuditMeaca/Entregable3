@@ -59,12 +59,14 @@ color: white;
 /************************************************************************************************************/
 /* FONDO */
 
+/*Tamaño del contenedor del juego*/
 .containsGame{
   width: 100vw;
-  height: 600px;
- 
+  height: 600px; 
 }
 
+/* Estas clases se encargan de animar el fondo con las 3 imagenes diferentes superpuestas 
+Escalando las imagenes al tamaño del contenedor del juego.*/
 .space {
   background: url("../sources/space.png");
   background-size: contain;
@@ -81,6 +83,7 @@ color: white;
   animation: moveSpace 10s linear infinite;
 }
 
+/*Animacion del fondo*/
 @keyframes moveSpace {
   0% {
     background-position: 550px;
@@ -90,6 +93,7 @@ color: white;
   }
 }
 
+/*Estilo del div que contiene el score*/
 .sum{
 position:fixed; 
 left:45%; 
@@ -99,10 +103,12 @@ font-weight:bold;
 color: white;
 font-family: Arial, Helvetica, sans-serif;
 }
+/*Estilo del div que contiene el timer*/
 .timer{
   background-color:grey; width:300px;height:50px;
   position:fixed;
 }
+/*Estilo del span del timer*/
 .timer span{
   display:block;
   background:repeating-linear-gradient(-45deg, 
@@ -114,7 +120,8 @@ font-family: Arial, Helvetica, sans-serif;
   animation:timer 60s linear;
 }
 
-.timer span:before{  /* usado para añadir contenido estético a un elemento, usando la propiedad content*/
+/* Usado para añadir contenido estético al timer, usando la propiedad content*/
+.timer span:before{  
   content:"TIME LEFT";
   display:block;
   position:absolute;
@@ -129,11 +136,12 @@ font-family: Arial, Helvetica, sans-serif;
   font-weight:bold;
   
 }
+/*Animacion del tiempo de juego*/
 @keyframes timer{
 0%{width:10px;}
 100%{width:300px; display:block;}
 }
-
+/*Estilo que se aplica al finalizar el tiempo de juego*/
 .gameover{
   position:fixed; z-index:100000; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.8);
   animation:gameover 60s linear forwards;
@@ -141,7 +149,7 @@ font-family: Arial, Helvetica, sans-serif;
   text-indent:0;  
   line-height:500px;
 }
-
+/*Animacion del TIME OUT*/
 @keyframes gameover{
 0%{left:-5000px;bottom:100%;}
 97%{left:-5000px;bottom:100%;}
@@ -151,6 +159,8 @@ font-family: Arial, Helvetica, sans-serif;
 /***************************************************************************************************************/
 /*OBSTACULOS Y MONEDAS*/
 
+
+/*Estilos de los obstaculos, que llaman a la animacion displace*/
  .blackhole {
    width:150px;
    height:151px;
@@ -168,6 +178,8 @@ font-family: Arial, Helvetica, sans-serif;
   animation: displace 8s steps(8) ;
   position: absolute;
 }
+
+/*Animacion de los 2 tipos de obtaculos. El desplazamiento de los mismos*/
  @keyframes displace{
   0%{right: -10% }
   10%{right: 10% }
@@ -182,6 +194,7 @@ font-family: Arial, Helvetica, sans-serif;
   100%{right: 100%;background-position: -1200px; display: hidden;}
  } 
  
+ /*Estilo del sprite de las monedas que activan la animacion float*/
 .money {
   width:150px;
   height:151px;
@@ -192,6 +205,7 @@ font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   right: 200px;
 }
+/*Animacion de las monedas, el desplazamiento de ellas*/
 @keyframes float {
 
   0%{right: -10% }
@@ -207,6 +221,9 @@ font-family: Arial, Helvetica, sans-serif;
   100%{right: 100%;background-position: -1200px; display: hidden;}
 
 }
+
+/*Las siguientes transformaciones permiten modificar el desplazamiento 
+del Amoung verticalmente y le agrega una rotacion*/
 .pos1{
   transform: translateY(-10%) rotate(-360deg);
   transition-property: transform;
@@ -238,6 +255,9 @@ font-family: Arial, Helvetica, sans-serif;
 /***************************************************************************************************/
 /*PERSONAJES Y COLLISION*/
 
+
+/*Estilo de la animacion del sprite sheet de los 
+2 tipos de Amoung*/
 .character {
   width:132.25px;
   height:147px;
@@ -254,10 +274,13 @@ font-family: Arial, Helvetica, sans-serif;
   left: 200px;
   position: absolute;
 }
+/*Animacion del Amoung*/
 @keyframes fly {
   0% { background-position: 0px }
   100% { background-position: -529px }
 }
+/*Estilo de la animacion del sprite sheet de agarrar monedas de los 
+2 tipos de Amoung*/
 .characterMoney {
   width:132.25px;
   height:147px;
@@ -274,10 +297,12 @@ font-family: Arial, Helvetica, sans-serif;
   left: 200px;
   position: absolute;
 }
+/*Animacion del Amoung cuando agarra una moneda*/
 @keyframes getMoney {
   0% { background-position: 0px }
   100% { background-position: -529px }
 }
+/*Estilo de la animacion del sprite sheet de la colision*/
 .collision {
   width:132.4px;
   height:129px;
@@ -287,6 +312,7 @@ font-family: Arial, Helvetica, sans-serif;
   left: 200px;
   position: absolute; 
 }
+/*Animacion de a colision*/
 @keyframes collision {
  0% {background-position: 0;} 
 
