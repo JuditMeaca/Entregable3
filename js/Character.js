@@ -4,7 +4,7 @@ class Character {
         this.name = "character";
     }
 
-
+//se agrega a si mismo al DOM
     addMe() {
 
         let obs = document.createElement("div");
@@ -33,6 +33,7 @@ class Character {
         let containGame = document.getElementById("stars");
         containGame.appendChild(obs);
     }
+    //mueve el personaje en la direccion dada por el parametro recibido
     move(key) {
         let character = document.getElementById("character");
         switch (key) {
@@ -57,17 +58,19 @@ class Character {
                 break;
         }
     }
+     //devuelve un objeto que contiene todos los detalles de dicho elemento HTMl
     getPos() {
         let me = document.getElementById(this.name);
         let posMe = me.getBoundingClientRect();
         return posMe;
     }
-
+//se a si borra del DOM
     deleteMe(){
         let me=document.getElementById("character");
         let parent=me.parentNode;
         parent.removeChild(me);
     }
+    //cambia de animacion al al tocar un BONUS
     takeMoney(){
         let me=document.getElementById("character");
         if(me.classList.contains("character")){
@@ -80,19 +83,7 @@ class Character {
             setTimeout(this.remplaceClass,500,"character2Money","character2");
         }
     }
-    takeMoney(){
-        let me=document.getElementById("character");
-        if(me.classList.contains("character")){
-            me.classList.remove("character");
-            me.classList.add("characterMoney");
-            setTimeout(this.remplaceClass,500,"characterMoney","character");
-        }else {
-            me.classList.remove("character2");
-            me.classList.add("character2Money");
-            setTimeout(this.remplaceClass,500,"character2Money","character2");
-        }
-    }
-
+    //cambia de animacion al tocar un obstaculo
     collision(){
         let me=document.getElementById("character");
         if(me.classList.contains("character")){

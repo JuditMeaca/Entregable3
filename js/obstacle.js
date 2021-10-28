@@ -4,6 +4,7 @@ class Obstacle extends Element{
     constructor(pos,tipe,name){
         super(pos,tipe,name);
     }
+    // se agrega a si mismo al DOM
     addMe(){
         let bHclass;
         let obs=document.createElement("div");
@@ -20,11 +21,13 @@ class Obstacle extends Element{
         containGame.appendChild(obs);
 
     }
+    // devuelve un objeto con los detalles de su elemnto html
     getPos(){
         let me=document.getElementById(this.name);
         let posMe=me.getBoundingClientRect();
         return posMe;
     }
+    // se borra a sdi mismo del DOM
     deleteMe(){
         
         let me= document.getElementById(this.name);
@@ -32,6 +35,7 @@ class Obstacle extends Element{
         let parent = me.parentNode;
 		parent.removeChild(me);
     }
+    //resta 10 puntos al SCORE
     onCollicion(){
         let scoreBox=document.getElementById("score");
         let score=parseInt(scoreBox.innerHTML)
